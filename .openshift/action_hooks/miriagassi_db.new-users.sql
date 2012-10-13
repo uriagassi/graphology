@@ -3,6 +3,7 @@
 -- Host: localhost    Database: miriagassi_db
 -- ------------------------------------------------------
 -- Server version	5.1.61
+use 'graphology';
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
