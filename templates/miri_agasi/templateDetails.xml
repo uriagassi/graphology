@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<install version="1.5" type="template">
+  <name>miri_agasi</name>
+  <description>
+    Miri Agasi Webhsite
+  </description>
+  <files>
+    <filename>index.php</filename>
+    <filename>templateDetails.xml</filename>
+    <filename>images/logo.jpg</filename>
+    <filename>css/template.css</filename>
+  </files>
+  <positions>
+    <position>left</position>
+  </positions>
+</install>
