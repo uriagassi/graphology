@@ -32,9 +32,9 @@ class JConfig {
 	var $ftp_root = '';
 	/* Database Settings */
 	var $dbtype = 'mysql';					// Normally mysql
-	var $host = $_ENV['OPENSHIFT_DB_HOST'];				// This is normally set to localhost
-	var $user = $_ENV['OPENSHIFT_DB_USERNAME']							// MySQL username
-	var $db = $_ENV['OPENSHIFT_DB_PASSWORD'];							// MySQL database name
+	var $host = '';				// This is normally set to localhost
+	var $user = '';							// MySQL username
+	var $db = '';							// MySQL database name
 	var $dbprefix = 'jos_';					// Do not change unless you need to!
 	
 	var $mailer = 'mail';
@@ -49,11 +49,20 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '15';
 	var $session_handler = 'database';
-	var $password = 'iEVRO0xC';
+	var $password = '';
 	var $sitename = 'מירי אגסי, המרכז לגרפולוגיה';
 	var $MetaDesc = 'מירי אגסי, המרכז לגרפולוגיה';
 	var $MetaKeys = '';
 	var $offline_message = 'This site is down for maintenance. Please check back again soon.';
 	var $legacy = '0';
 	var $debug_db = '0';
+	
+	public function __construct() {
+		$this->host = getenv("OPENSHIFT_DB_HOST").":".getenv("OPENSHIFT_DB_PORT");
+		$this->user = getenv("OPENSHIFT_DB_USERNAME");
+		$this->password = getenv("OPENSHIFT_DB_PASSWORD");
+		$this->db = getenv("OPENSHIFT_APP_NAME");
+		$this->log_path = getenv("OPENSHIFT_LOG_DIR");
+		$this->tmp_path = getenv("OPENSHIFT_TMP_DIR");
+	}
 }
