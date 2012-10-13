@@ -32,10 +32,10 @@ class JConfig {
 	var $ftp_root = '';
 	/* Database Settings */
 	var $dbtype = 'mysql';					// Normally mysql
-	var $host = 'localhost';				// This is normally set to localhost
-	var $user = 'bitnami';							// MySQL username
-	var $password = '9371a059ce';						// MySQL password
-	var $db = 'bitnami_joomla';							// MySQL database name
+	var $host = '127.10.177.1:3306';				// This is normally set to localhost
+	var $user = 'admin';							// MySQL username
+	var $password = 'DMtd_NkKPBkl';						// MySQL password
+	var $db = 'graphology';							// MySQL database name
 	var $dbprefix = 'jos_';					// Do not change unless you need to!
 	
 	var $mailer = 'mail';
