@@ -32,9 +32,9 @@ class JConfig {
 	var $ftp_root = '';
 	/* Database Settings */
 	var $dbtype = 'mysql';					// Normally mysql
-	var $host = '127.10.177.1:3306';				// This is normally set to localhost
-	var $user = 'admin';							// MySQL username
-	var $db = 'graphology';							// MySQL database name
+	var $host = $_ENV['OPENSHIFT_DB_HOST'];				// This is normally set to localhost
+	var $user = $_ENV['OPENSHIFT_DB_USERNAME']							// MySQL username
+	var $db = $_ENV['OPENSHIFT_DB_PASSWORD'];							// MySQL database name
 	var $dbprefix = 'jos_';					// Do not change unless you need to!
 	
 	var $mailer = 'mail';
